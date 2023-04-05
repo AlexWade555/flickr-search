@@ -1,5 +1,8 @@
 import { Outlet, useNavigate } from "react-router-dom"
 import { useState } from "react"
+import Button from '@mui/material/Button'
+import TextField from '@mui/material/TextField'
+import Stack from '@mui/material/Stack'
 
 function SearchPage() {
   const navigate = useNavigate()
@@ -14,12 +17,14 @@ return (
   <div>
     <h1>Flickr Search</h1>
     <form onSubmit={handleSubmit}>
+    <Stack>
       <input
         onChange={(e) => setQuery(e.target.value)}
         value={query}
         type="text"
       />
       <button>Search</button>
+    </Stack>
     </form>
     <Outlet />
   </div>
