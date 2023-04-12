@@ -17,7 +17,11 @@ return (
   <div>
     <h1>Flickr Search</h1>
     <form onSubmit={handleSubmit}>
-    <Stack>
+    <Stack
+      direction='row'
+      justifyContent='center'
+      
+    >
       <input
         onChange={(e) => setQuery(e.target.value)}
         value={query}
